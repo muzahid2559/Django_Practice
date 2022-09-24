@@ -1,12 +1,17 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Homepage of First Application</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
   </head>
   <body>
     <h1> This is the homepage of first_application </h1>
     <h2> I am being from veiws.py of first_application </h2>
     {{text_1}}
+    <br>
+
+    <img src="{% static 'images/python-plus-django-1.jpg' %}">
   </body>
 </html>
