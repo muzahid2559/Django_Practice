@@ -11,3 +11,9 @@ def index(request):
     musician_list = Musician.objects.order_by('first_name')
     diction = {'text_1':'This is a list of Musician', 'musician': musician_list}
     return render(request,'first_application/index.html',context=diction)
+
+
+
+def form(request):
+    diction = {}
+    return render(request,'first_application/form.html',context=diction)
