@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from first_application.models import Musician, Album
+from first_application import forms
 
 
 
@@ -15,5 +16,6 @@ def index(request):
 
 
 def form(request):
-    diction = {}
+    new_form = forms.user_form()
+    diction = {'test_form':new_form, 'heading_1':'This form is created using django library'}
     return render(request,'first_application/form.html',context=diction)
