@@ -8,7 +8,6 @@ from first_application import forms
 # Create your views here.
 
 def index(request):
-    # SELECT * FROM Musician ORDER BY first_name
     musician_list = Musician.objects.order_by('first_name')
     diction = {'text_1':'This is a list of Musician', 'musician': musician_list}
     return render(request,'first_application/index.html',context=diction)
@@ -21,10 +20,11 @@ def form(request):
 
     if request.method == 'POST':
         new_form = forms.user_form(request.POST)
+        diction.update({'test_form':new_form})
 
         if new_form.is_valid():
 
-            diction.update({'field': new_form.cleaned_data['field']})
+            diction.update({'field':"Match!!"})
             diction.update({'form_submited' : 'Yes'})
 
     return render(request,'first_application/form.html',context=diction)
