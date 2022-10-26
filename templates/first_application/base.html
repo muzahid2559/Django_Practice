@@ -10,16 +10,19 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <meta charset="utf-8">
-    <title></title>
+    <title>{{ title }}</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <ul class="navbar-nav">
     <li class="nav-item active">
-      <a class="nav-link" href="{% url 'first_application:home' %}">Home</a>
+      <a class="nav-link" href="{% url 'first_application:index' %}">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'first_application:form' %}">Form</a>
+      <a class="nav-link" href="{% url 'first_application:musician_form' %}">Add Musician</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'first_application:album_form' %}">Add Album</a>
     </li>
   </ul>
 </nav>

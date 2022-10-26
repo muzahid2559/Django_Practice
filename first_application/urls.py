@@ -6,6 +6,7 @@ app_name = "first_application"
 
 urlpatterns = [
 
-    path('', views.home, name='home'),
-    path('form/', views.form, name='form'),
+    path('', views.index, name='index'),
+    path('add_musician/', views.musician_form, name='musician_form'),
+        path('add_album/', views.album_form, name='album_form'),
 ]
