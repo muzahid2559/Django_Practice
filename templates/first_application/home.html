@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 {% extends "first_application/base.html" %}
+{% load my_filters %}
+
 {% block body_block %}
 
-<h1>{{ simple_text | upper}}</h1>
-<h1>{{ simple_text | lower}}</h1>
-<h1>{{ simple_num | add:'5'}}</h1>
-<h1>{{ simple_text | capfirst}}</h1>
-<h1>{{ simple_text | cut:"i"}}</h1>
+<h1>{{ sample_text|custom_filter:" New Addition" }}</h1>
+
+<h1>{{ sample_text|custom_filter2 }}</h1>
+
 {% endblock %}
