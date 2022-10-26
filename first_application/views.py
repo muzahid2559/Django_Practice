@@ -8,8 +8,7 @@ from first_application import forms
 # Create your views here.
 
 def home(request):
-    musician_list = Musician.objects.order_by('first_name')
-    diction = {'text_1':'This is a list of Musician', 'musician': musician_list}
+    diction = {'simple_text':'This is a Simple Text', 'simple_num':'10'}
     return render(request,'first_application/home.html',context=diction)
 
 
