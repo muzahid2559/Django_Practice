@@ -17,7 +17,7 @@ class Musician(models.Model):
 
 class Album(models.Model):
     # id = models.AutoField(Primary_key=True)
-    artist = models.ForeignKey(Musician, on_delete=models.CASCADE)
+    artist = models.ForeignKey(Musician, on_delete=models.CASCADE, related_name='album_list')
     name = models.CharField(max_length=100)
     release_date = models.DateField()
     rating = (
