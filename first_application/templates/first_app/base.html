@@ -17,6 +17,9 @@
       <li class="nav-item active">
         <a class="nav-link" href="{% url 'first_application:IndexView' %}">Home</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'first_application:add_musician' %}">Add Musician</a>
+      </li>
   </nav>
   <div class="container" style="padding-top:20px">
     {% block body_block %}

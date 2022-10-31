@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 
@@ -13,6 +14,9 @@ class Musician(models.Model):
 
     def __str__(self):
         return self.first_name + " " + self.last_name
+
+    def get_absolute_url(self):
+        return reverse('first_application:musician_details', kwargs={'pk':self.pk})
 
 
 class Album(models.Model):
