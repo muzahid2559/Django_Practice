@@ -10,5 +10,6 @@ urlpatterns = [
     # path('', views.index_test, name='index_test'), # function base url
     path('', views.IndexView.as_view(), name='IndexView'), # class base url
     path('musician_details/<pk>/', views.MusicianDetail.as_view(), name='musician_details'),
-        path('add_musician/', views.AddMusician.as_view(), name='add_musician'),
+    path('add_musician/', views.AddMusician.as_view(), name='add_musician'),
+    path('musician_update/<pk>/', views.UpdateMusician.as_view(), name='musician_update'),
 ]
